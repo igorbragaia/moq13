@@ -12,7 +12,13 @@
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="https://igorbragaia.github.io/moq13/js/angular.js"></script>
+      <script src="js/angular.js"></script>
+
+
+      <script src="js/pdf.compat.js"></script>
+	  <script src="js/pdf.js"></script>
+	  <script src="js/ng-pdfviewer.js"></script>
+
    </head>
    <body ng-app="myapp" >
       <div ng-controller="MyCtrl">
@@ -37,7 +43,8 @@
                <tr ng-repeat="post in posts">
                   <td>
                      {{post.description}}<br>
-                     <pdf-viewer url="{{post.url}}" class="dark-border"></pdf-viewer>
+   					<embed src="{{post.url}}" width="800px" height="2100px" />
+
                   </td>
                </tr>
             </table>
