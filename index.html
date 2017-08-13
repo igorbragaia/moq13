@@ -36,7 +36,8 @@
                   </th>
                <tr ng-repeat="post in posts">
                   <td>
-                     {{true}}
+                     {{post.description}}<br>
+                     <pdf-viewer url="{{post.url}}" class="dark-border"></pdf-viewer>
                   </td>
                </tr>
             </table>
@@ -45,5 +46,4 @@
          </footer>
       </div>
    </body>
-   
 </html>
