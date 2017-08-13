@@ -23,12 +23,12 @@
    <body ng-app="myapp" >
       <div ng-controller="MyCtrl">
          <header class="jumbotron">
-            <div class="container">
+            <div class="container"> 
                <div class="row">
                   <div class="col-sm-2">
                      <img style="max-width:100px" src="https://igorbragaia.github.io/moq13/self.png">
                   </div>
-                  <div class="col-sm-8">		
+                  <div class="col-sm-8">		 
                      <a class="navbar-brand" href="#"> MOQ13 - Probabilidade e Estatística<br><strong>registros de bordo por Igor Bragaia</strong></a>
                   </div>
                </div>
@@ -41,9 +41,9 @@
                   <th>
                      Desafios propostos pela professora <a href="http://www.mec.ita.br/~denise/index.html">Denise B. Ferrari</a>
                   </th>
-               <tr ng-repeat="post in posts">
-                  <td style="text-align: center">
-                        {{post.description}}<br>
+               <tr ng-repeat="post in posts | orderBy: 'week'" style="text-align: center">
+                  <td >
+                        <strong>Semana {{post.week}}: </strong>{{post.description}}<br>
                         <strong> <a href="{{post.url}}">Click here to download the PDF!</a></strong><br>
                      <object data="{{post.url}}" type="application/pdf" width="75%" height="800px">                     </object>
    					<!--<embed src="reports/2.pdf" width="800px" height="1200px" />-->
