@@ -42,9 +42,8 @@
                   </th>
                <tr ng-repeat="post in posts">
                   <td>
-                     {{post.description}}<br>
+                     {{post.description}}<br>{{post.url}}<br>
    					<embed src="{{post.url}}" width="800px" height="2100px" />
-
                   </td>
                </tr>
             </table>
