@@ -9,12 +9,10 @@
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-	    <script>
-	    	var app = angular.module("myapp", []);
-	    </script>
+	    <script src="https://igorbragaia.github.io/moq13/js/angular.js"></script>
 	</head>
 
-	<body ng-app="myapp">
+	<body ng-app ng-controler="MyCtrl">
 
 	<header class="jumbotron">
 		<div class="container">
@@ -23,16 +21,21 @@
 					<img style="max-width:100px" src="https://igorbragaia.github.io/moq13/self.png">
 				</div>
 				<div class="col-sm-8">		
-					<a class="navbar-brand" href="#">MOQ13 - Probabilidade e Estatística<br><strong>registro de bordo por Igor Bragaia</strong></a>
+					<a class="navbar-brand" href="#">MOQ13 - Probabilidade e Estatística<br><strong>registros de bordo por Igor Bragaia</strong></a>
 				</div>
 			</div>
 		</div>
 	</header>
 
 	<div class="container" style="background: #F5F5F5">
-		<div ng-repeat="n in [42, 42, 43, 43] track by $index">
-  			{{n}}
-		</div>
+		<table class="table">
+			<th>
+				Desafios propostos pela professora Denise B. Ferrari
+			</th>
+			<tr ng-repeat="post in posts">
+				oi!
+			</tr>
+		</table>
 	</div>
 
 	<footer>
