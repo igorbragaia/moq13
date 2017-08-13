@@ -8,6 +8,10 @@ function MyCtrl($scope){
 	  {
 	    "week": "2",
 	    "description": "Questão de Galileu e encontro de Romeu e Julieta."
+	  },
+	  {
+	    "week": "2",
+	    "description": "Questão de Galileu e encontro de Romeu e Julieta."
 	  }
 	];
 }
