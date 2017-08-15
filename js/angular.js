@@ -4,9 +4,9 @@ var myapp=angular
 
 			$scope.posts = [
 			  {
-			    "week": "3",
+			    "week": "2",
 			    "description": "Questão de Galileu e encontro de Romeu e Julieta.",
 			    "url": "https://igorbragaia.github.io/moq13/reports/2.pdf"
 			  }
 			];
-});
+})
