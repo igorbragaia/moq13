@@ -1,4 +1,4 @@
- myapp.directive('myPost', function() { 
+myapp.directive('myPost', function() { 
   return { 
     restrict: 'E', 
     scope: { 
