@@ -1,55 +1,74 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <title>Desafios MOQ13</title>
-      <link rel="icon" type="image/png" href="https://igorbragaia.github.io/moq13/ita.png">
-      <meta charset="utf-8">
-      <meta name="author" content="Igor Bragaia">
-      <!-- Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-      <!-- Font Awesome-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="js/angular.js"></script>
-   </head>
-   <body ng-app="myapp" >
-      <div ng-controller="MyCtrl">
-         <header class="jumbotron">
-            <div class="container"> 
-               <div class="row">
-                  <div class="col-sm-2">
-                     <a href="https://br.linkedin.com/in/igor-bragaia-23517a115"><img style="max-width:100px" src="https://igorbragaia.github.io/moq13/self.png"></a>
-                  </div>
-                  <div class="col-sm-8">		 
-                     <a class="navbar-brand" href="#"> MOQ13 - Probabilidade e Estatística<br><strong>registros de bordo por Igor Bragaia</strong></a>
-                  </div>
-               </div>
+
+<head>
+    <title>Desafios MOQ13</title>
+    <link rel="icon" type="image/png" href="https://igorbragaia.github.io/moq13/ita.png">
+    <meta charset="utf-8">
+    <meta name="author" content="Igor Bragaia">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/mainCtrl.js"></script>
+
+    <!-- Directives -->
+    <script src="js/directives/myPost.js"></script>
+
+</head>
+
+<body ng-app="myapp">
+    <div ng-controller="mainCtrl">
+        <header class="jumbotron-fluid" style="background: #F5F5F5">
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2"> 
+                        <a href="https://br.linkedin.com/in/igor-bragaia-23517a115"><img style="max-width:100px" src="https://igorbragaia.github.io/moq13/self.png"></a>
+                    </div>
+                    <div class="col-sm-8">
+                        <a class="navbar-brand" href="#"> MOQ13 - Probabilidade e Estatística<br><strong>registros de bordo por Igor Bragaia</strong></a>
+                    </div>
+                </div>
             </div>
-         </header>
-         <div class="container" style="background: #F5F5F5">
+            <br>
+        </header>
+
+        <br>
+
+        <div class="container" style="background: #F5F5F5">
             <a href="http://www.mec.ita.br/~denise/teaching/MOQ13_PO210.html"><strong>Ementa do curso</strong></a>
             <table class="table">
-               <tr>
-                  <th>
-                     Desafios propostos pela professora <a href="http://www.mec.ita.br/~denise/index.html">Denise B. Ferrari</a>
-                  </th>
-               </tr>
-               <tr ng-repeat="post in posts | orderBy: 'week'" style="text-align: center">
-                  <td >
+                <tr>
+                    <th>
+                        Desafios propostos pela professora <a href="http://www.mec.ita.br/~denise/index.html">Denise B. Ferrari</a>
+                    </th>
+                </tr>
+                <tr ng-repeat="post in posts | orderBy: 'week'" style="text-align: center">
+                    <td>
                         <strong>Semana {{post.week}}: </strong>{{post.description}}<br>
                         <strong> <a href="{{post.url}}">Click here to download the PDF!</a></strong><br>
-                     <object data="{{post.url}}" type="application/pdf" width="45%" height="450%"></object>
-   					<!--<embed src="reports/2.pdf" width="800px" height="1200px" />-->
-                  </td>
-               </tr>
+                        <object data="{{post.url}}" type="application/pdf" width="45%" height="450%"></object>
+                        <!--<embed src="reports/2.pdf" width="800px" height="1200px" />-->
+                    </td>
+                </tr>
             </table>
-         </div>
-         <footer>
-         </footer>
-      </div>
-   </body>
+        </div>
+        <footer>
+        </footer>
+    </div>
+
+</body>
+
 </html>
